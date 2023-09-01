@@ -70,7 +70,11 @@ public class Main {
                     listOfProducts += indexOfProduct + ". " + product.name + " - " + String.format("%.2f", product.price) + "\n";
                     amount += Math.floor(product.price * 100) / 100;
                     indexOfProduct++;
+
+
                 }
+
+                scanner.close();
 
                 BillMaker billMaker = new BillMaker(listOfProducts, amount, numberOfPeople);
                 billMaker.makeBill();
